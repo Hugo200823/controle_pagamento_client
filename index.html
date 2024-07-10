@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body class="background-brand">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/" style="margin-left: 15px;">
+            <img src="static/brand.jpg" class="d-block" style="width: 50px;" alt="logo empresa">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cadastroAluno.html">Cadastro Aluno</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cadastroEmpresa.html">Cadastro Empresa</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="d-flex col-9 mx-auto">
+          <aside class="col-4 px-4">
+            <section class="mt-4 pt-2">
+              <button type="button" id="virarMes" class="lead">Virar mês</button>
+              <button type="button" id="extrairDados" class="lead">Extrair dados</button>
+            </section>
+            <hr>
+            <section class="sticky-top mt-3 py-4">
+              <h1 class="lead text-center pt-4">Detalhes Cliente</h1>
+              <div id="resultadoPesquisa" class="my-auto">
+                <p id="empty-customer">Nenhum cliente selecionado</p>
+              </div>
+            </section>
+          </aside>
+          <article class="d-flex flex-column col-8">
+            <form class="col-12 mx-auto mt-4">
+              <select class="form-select" aria-label="Default select example" id="empresas">
+                  <option selected>-- Empresas --</option>
+              </select>
+            </form>
+            <section class="col-12 mt-4 bg-light" id="matutino">
+                <h1 class="bg-dark text-light text-center">Matutino</h1>
+                <table class="table">
+                    <thead class="table-dark">
+                      <tr class="tituloLista"></tr>
+                    </thead>
+                    <tbody class="corpoLista"></tbody>
+                  </table>
+            </section>
+  
+            <section class="col-12 mt-5 bg-light" id="vespertino">
+                <h1 class="bg-dark text-light text-center">Vespertino</h1>
+                <table class="table">
+                    <thead class="table-dark">
+                      <tr class="tituloLista"></tr>
+                    </thead>
+                    <tbody class="corpoLista"></tbody>
+                  </table>
+            </section>
+          </article>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/dtos/Cliente.dto.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+.background-brand {
+    /* background-image: url(../brand-wide.jpg); */
+    background-position: center center;
+    background-repeat: repeat-y;
+    background-size: 800px;
+}
+
+#empty-customer {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50%;
+}
+
+#virarMes {
+    background-color: transparent;
+    border: none;
+    height: 80px;
+    position: relative;
+    font-weight: bold;
+}
+
+#virarMes::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: 0.5;
+    background-image: url(../img/calendar.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 80px;
+    filter: grayscale(1);
+}
+
+#extrairDados {
+    background-color: transparent;
+    border: none;
+    height: 80px;
+    position: relative;
+    font-weight: bold;
+}
+
+#extrairDados::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: 0.3;
+    background-image: url(../img/relatorio.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 80px;
+    filter: grayscale(1);
+}
